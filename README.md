@@ -391,8 +391,8 @@ Translations of the guide are available in the following languages:
   ```
 
 * <a name="trailing-params-comma"></a>
-  Add a comma after the last parameter in a method call or array,
-  but only when the parameters are on separate lines.
+  Add a comma after the last parameter in a method call, but only
+  when the parameters are on separate lines.
 <sup>[[link](#trailing-params-comma)]</sup>
 
   ```Ruby
@@ -402,6 +402,8 @@ Translations of the guide are available in the following languages:
                count,
                color
              )
+  # bad
+  some_method(size, count, color, )
 
   # good - easier to move/add/remove parameters and does not pollute diffs
   some_method(
@@ -3034,24 +3036,28 @@ resource cleanup when possible.
   STATES = %i(draft open closed)
   ```
 
-* <a name="no-trailing-array-commas"></a>
-  Avoid comma after the last item of an `Array` or `Hash` literal, especially
-  when the items are not on separate lines.
-<sup>[[link](#no-trailing-array-commas)]</sup>
+* <a name="trailing-array-commas"></a>
+  Add a comma after the last item of an `Array` or `Hash` literal,
+  but only when the items are not on separate lines.
+<sup>[[link](#trailing-array-commas)]</sup>
 
   ```Ruby
-  # bad - easier to move/add/remove items, but still not preferred
+  # bad
   VALUES = [
              1001,
              2020,
-             3333,
+             3333
            ]
 
   # bad
   VALUES = [1001, 2020, 3333, ]
 
-  # good
-  VALUES = [1001, 2020, 3333]
+  # good - easier to move/add/remove items and does not pollute diffs
+  VALUES = [
+             1001,
+             2020,
+             3333,
+           ]
   ```
 
 * <a name="no-gappy-arrays"></a>
