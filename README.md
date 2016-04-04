@@ -403,7 +403,7 @@ Translations of the guide are available in the following languages:
                color
              )
 
-  # good - easier to move/add/remove parameters
+  # good - easier to move/add/remove parameters and does not pollute diffs
   some_method(
                size,
                count,
