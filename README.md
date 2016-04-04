@@ -391,8 +391,8 @@ Translations of the guide are available in the following languages:
   ```
 
 * <a name="trailing-params-comma"></a>
-  Add a comma after the last parameter in a method call, but only when the
-  parameters are on separate lines.
+  Add a comma after the last parameter in a method call or array,
+  but only when the parameters are on separate lines.
 <sup>[[link](#trailing-params-comma)]</sup>
 
   ```Ruby
